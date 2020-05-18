@@ -1,6 +1,8 @@
 #
 # Copyright (C) 2019 The TwrpBuilder Open-Source Project
 #
+# Copyright (C) 2019-2020 The OrangeFox Recovery Project
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -32,4 +34,8 @@ PRODUCT_MANUFACTURER := Xiaomi
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
+
+# wrappedkey
+PRODUCT_PROPERTY_OVERRIDES += \
+    fbe.data.wrappedkey=true
 #
