@@ -1,18 +1,21 @@
 #
-# Copyright (C) 2019-2020 OrangeFox Recovery Project
+#	This file is part of the OrangeFox Recovery Project
+# 	Copyright (C) 2019-2020 The OrangeFox Recovery Project
 #
-# This software is licensed under the terms of the GNU General Public
-# License version 2, as published by the Free Software Foundation, and
-# may be copied, distributed, and modified under those terms.
+#	OrangeFox is free software: you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation, either version 3 of the License, or
+#	any later version.
 #
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+#	OrangeFox is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
 #
-# See <http://www.gnu.org/licenses/>.
+# 	This software is released under GPL version 3 or any later version.
+#	See <http://www.gnu.org/licenses/>.
 #
-# Please maintain this if you use this script or any part of it
+# 	Please maintain this if you use this script or any part of it
 #
 FDEVICE="violet"
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
@@ -36,7 +39,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI=1
 	export OF_USE_NEW_MAGISKBOOT=1
 	export FOX_REPLACE_BUSYBOX_PS=1
-        export OF_KEEP_DM_VERITY=1
+        # export OF_KEEP_DM_VERITY=1; # disable this in R10.1_2
         export OF_PATCH_AVB20=1
   	export OF_FBE_METADATA_MOUNT_IGNORE=1
 	export OF_CHECK_OVERWRITE_ATTEMPTS=1
@@ -58,5 +61,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  	fi
 
 	add_lunch_combo omni_"$FDEVICE"-eng
+	add_lunch_combo omni_"$FDEVICE"-userdebug
 fi
 #
