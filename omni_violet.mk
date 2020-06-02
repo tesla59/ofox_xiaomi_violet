@@ -35,7 +35,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
 
-# wrappedkey
-PRODUCT_PROPERTY_OVERRIDES += \
-    fbe.data.wrappedkey=true
+## wrappedkey
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    fbe.data.wrappedkey=true
 #
